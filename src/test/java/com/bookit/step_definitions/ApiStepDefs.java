@@ -190,7 +190,6 @@ public class ApiStepDefs  {
                 .header("Authorization",token)
                 .queryParams(studentInfo)
                 .when().post(Environment.BASE_URL +endpoint).prettyPeek();
-
     }
     @Then("I delete previously added student")
     public void i_delete_previously_added_student() {
@@ -205,8 +204,6 @@ public class ApiStepDefs  {
                 .when()
                 .delete(Environment.BASE_URL + "/api/students/{id}")
                 .then().statusCode(204);
-
-
     }
 
     }
